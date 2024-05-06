@@ -25,10 +25,11 @@ function validate()
 </script> 
 </head>
 <body>
-	<div style="text-align:center"><h1>Login application in Java using MVC and MySQL </h1> </div>
+	<div style="text-align:center"><h1>Login application</h1> </div>
 	<br>
 	<form name="form" action="LoginServlet" method="post" onsubmit="return validate()">
 		<!-- Do not use table to format fields. As a good practice use CSS -->
+		
 		<table align="center">
 		 <tr>
 		 <td>Username</td>
@@ -51,4 +52,3 @@ function validate()
 	</form>
 </body>
 </html>
-<!-- -->
