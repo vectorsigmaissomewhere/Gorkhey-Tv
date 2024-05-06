@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#navbar{
+	width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #FF6EC7;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+body{
+    background-color: rgb(65, 213, 250);
+}
+
+.about-1  {
+    margin: 30px;
+    padding: 15px;
+}
+
+.about-1 h1{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-family: 'Times New Roman'; 
+    font-size: 40px;
+}
+
+.about-1 p{
+    text-align: center;
+    padding: 3px;
+    color: #424141;
+}
+
+.about-2 .content-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-item{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 80px, 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 9px rgba(0, 0, 0.6);
+    height: 390px;
+    width: 290%;
+    text-align: center;
+    margin-left: 90px;
+    
+}
+
+.about-item i{
+    font-size: 40px;
+    margin: 0;
+}
+
+.about-item h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.about-item hr{
+    width: 55px;
+    height: 3px;
+    background-color: rgb(44, 44, 44);
+    margin: 0 auto;
+    border: none;
+}
+
+.about-item:hover{
+    background-color: #FF6EC7;
+    transition: 0.4s;
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+    color: #fff;
+}
+
+.about-item:hover hr{
+    background-color: #fff;
+}
+
+footer{
+    background-color: #FF6EC7;
+    height: 62px;
+    padding: 10px 0px;
+
+}
+
+footer p{
+    color: white;
+}
