@@ -1,10 +1,12 @@
-package com.mvc.controller;
+ package com.mvc.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.mvc.bean.LoginBean;
 import com.mvc.dao.LoginDao;
@@ -34,6 +36,13 @@ public class LoginServlet extends HttpServlet {
 		if(userValidate.equals("SUCCESS")) //If function returns success string then user will be rooted to Home page
 		 {
 			 request.setAttribute("userName", userName); //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
+			 HttpSession session=request.getSession();
+			 session.setAttribute("userName",userName);
+			 String city = loginDao.getUserCity(userName);
+	            if (city != null) {
+	                session.setAttribute("city", city);
+	            }
+			 session.setMaxInactiveInterval(30*60); //session for 30 minutes
 			 request.getRequestDispatcher("/Home.jsp").forward(request, response);//RequestDispatcher is used to send the control to the invoked page.
 		 }
 		 else
