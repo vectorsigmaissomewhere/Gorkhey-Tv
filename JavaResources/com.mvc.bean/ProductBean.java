@@ -1,0 +1,87 @@
+package com.mvc.bean;
+
+public class ProductBean {
+	private int productId;
+	private String productName;
+	private String productDescription;
+	private String productCategory;
+	private String productPrice;
+	private int productStock;
+	private String productActive;
+	private String imageName;
+	private byte[] imageData;
+	
+	public ProductBean() {
+		super();
+	}
+	public int getProductId() {
+		return productId;
+	}
+	
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+	public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+    public String getProductCategory() {
+        return productCategory;
+    }
+
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
+    }
+
+    public String getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(String productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public int getProductStock() {
+        return productStock;
+    }
+
+    public void setProductStock(int productStock) {
+        this.productStock = productStock;
+    }
+
+    public String getProductActive() {
+        return productActive;
+    }
+
+    public void setProductActive(String productActive) {
+        this.productActive = productActive;
+    }
+
+    public String getFileName() {
+        return imageName;
+    }
+
+    public void setFileName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
+
+    public void setImageData(byte[] imageData) {
+        this.imageData = imageData;
+    }
+}
