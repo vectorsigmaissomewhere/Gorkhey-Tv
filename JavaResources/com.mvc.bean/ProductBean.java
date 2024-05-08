@@ -4,12 +4,12 @@ public class ProductBean {
 	private int productId;
 	private String productName;
 	private String productDescription;
-	private String productCategory;
 	private String productPrice;
 	private int productStock;
 	private String productActive;
 	private String imageName;
 	private byte[] imageData;
+	private String base64Image;
 	
 	public ProductBean() {
 		super();
@@ -35,14 +35,6 @@ public class ProductBean {
 
     public void setProductDescription(String productDescription) {
         this.productDescription = productDescription;
-    }
-
-    public String getProductCategory() {
-        return productCategory;
-    }
-
-    public void setProductCategory(String productCategory) {
-        this.productCategory = productCategory;
     }
 
     public String getProductPrice() {
@@ -84,4 +76,13 @@ public class ProductBean {
     public void setImageData(byte[] imageData) {
         this.imageData = imageData;
     }
+    
+    public String getBase64Image() {
+        return base64Image;
+    }
+
+    public void setBase64Image(String base64Image) {
+        this.base64Image = base64Image;
+    }
 }
+
