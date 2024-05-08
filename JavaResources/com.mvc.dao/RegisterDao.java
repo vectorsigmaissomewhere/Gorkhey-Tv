@@ -5,14 +5,21 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import com.mvc.bean.RegisterBean;
 import com.mvc.util.DBConnection;
+import com.mvc.bean.PasswordEncryptionWithAes;
 
 public class RegisterDao { 
+	
 	 public String registerUser(RegisterBean registerBean)
 	 {
 		 String fullName = registerBean.getFullName();
 		 String email = registerBean.getEmail();
 		 String userName = registerBean.getUserName();
-		 String password = registerBean.getPassword();
+		 String password="";
+		try {
+			password = PasswordEncryptionWithAes.encryptPassword(registerBean.getPassword(),"U3CdwubLD5yQbUOG92ZnHw==");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		 String phonenumber = registerBean.getPhoneNumber();
 		 String city = registerBean.getCity();
 		 String state = registerBean.getState();
