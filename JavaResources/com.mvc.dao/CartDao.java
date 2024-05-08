@@ -53,5 +53,19 @@ public class CartDao {
         }
         return cartItems;
     }
+    public int calculateTotal(String username) throws SQLException {
+        int total = 0;
+        String query = "SELECT SUM(price) AS total FROM cart WHERE username = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, username);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    total = resultSet.getInt("total");
+                }
+            }
+        }
+        return total;
+    }
 
 }
+
