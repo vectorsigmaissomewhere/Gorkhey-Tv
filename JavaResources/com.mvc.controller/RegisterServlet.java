@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.mvc.bean.RegisterBean;
 import com.mvc.dao.RegisterDao;
 
+
 public class RegisterServlet extends HttpServlet {
  
 	 public RegisterServlet() {
@@ -42,7 +43,7 @@ public class RegisterServlet extends HttpServlet {
 		 
 		 if(userRegistered.equals("SUCCESS"))   //On success, you can display a message to user on Home page
 		 {
-			request.getRequestDispatcher("/Home.jsp").forward(request, response);
+			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		 }
 		 else   //On Failure, display a meaningful message to the User.
 		 {
