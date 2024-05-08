@@ -30,7 +30,7 @@
             <li><a href="Product.jsp">Product</a></li>
             <li><a href="Contact.jsp">Contact</a></li>
             <li><a href="AboutUs.jsp">About Us</a></li>
-            <li><a href="Cart.jsp">Cart</a></li>
+            <li><a href="Cart.jsp"">Cart</a></li>
             <% if(username.equals("")) { %>
                 <li><a href="Login.jsp">Login</a></li>
             <% } else { %>
@@ -54,7 +54,12 @@
             <h2><%= product.getProductName() %></h2>
             <h2>Rs. <%= product.getProductPrice() %></h2>
             <p><%= product.getProductDescription() %></p>
-            <button>Add to Cart</button> 
+            <% if(username.equals("")) { %>
+            <p><a href="Login.jsp" style="text-decoration: none;">Login</a> To add in cart</p>
+              <% } %>
+            <% if(username != "") { %>
+               <button><a href="AddToCartServlet?productName=<%= product.getProductName() %>&price=<%= product.getProductPrice() %>&quantity=1" style="text-decoration: none;">Add to Cart</a></button>
+             <% } %>
         </div>    
         <% 
             }
