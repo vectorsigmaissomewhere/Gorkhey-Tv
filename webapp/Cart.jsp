@@ -5,6 +5,7 @@
 <%@ page import="com.mvc.util.DBConnection" %>
 <%@ page import="com.mvc.bean.CartBean" %>
 <%@ page import="com.mvc.dao.CartDao" %>
+<%@ page import="com.mvc.dao.CartUtility" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,6 @@
         }
     %>
     <% if (userName != null && !userName.isEmpty()) { %>
-        <p>Here is your Cart:</p>
         <table>
             <thead>
                 <tr>
@@ -69,6 +69,12 @@
                 %>
             </tbody>
         </table>
+        <p>Total: <%= CartUtility.calculateTotal(userName) %></p>
+        <form action="orderStatus.jsp" method="post">
+          <p>Proceed To Order</p>
+          <button type="submit">Proceed to Order</button>
+         </form>
+        
         <a href="Home.jsp">Home Page</a>
     <% } else { %>
         <% 
