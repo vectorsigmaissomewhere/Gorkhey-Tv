@@ -52,36 +52,27 @@ public class ProductDao {
         return list;
     }
     
-    public void addProduct(Product product) {
-        Connection con = null;
-        PreparedStatement preparedStatement = null;
+    private static final String INSERT_PRODUCT_SQL = "INSERT INTO product (name, description, price, stock, active, filename, data) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-        try {
-            con = DBConnection.createConnection();
-            String query = "INSERT INTO product (name, description, price, stock, active) VALUES (?, ?, ?, ?, ?)";
-            preparedStatement = con.prepareStatement(query);
+    public void addProduct(Product product) {
+        try (Connection connection = DBConnection.createConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PRODUCT_SQL)) {
+
             preparedStatement.setString(1, product.getName());
             preparedStatement.setString(2, product.getDescription());
             preparedStatement.setInt(3, product.getPrice());
             preparedStatement.setInt(4, product.getStock());
             preparedStatement.setString(5, product.getActive());
+            preparedStatement.setString(6, product.getFilename());
+            preparedStatement.setBlob(7, product.getData());
 
             preparedStatement.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (preparedStatement != null) {
-                    preparedStatement.close();
-                }
-                if (con != null) {
-                    con.close();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
+
 
 
