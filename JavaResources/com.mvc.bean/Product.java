@@ -1,18 +1,24 @@
 package com.mvc.bean;
 
+import java.io.InputStream;
+
 public class Product {
     private String name;
     private String description;
     private int price;
     private int stock;
     private String active;
+    private String filename;
+    private InputStream data;
 
-    public Product(String name, String description, int price, int stock, String active) {
+    public Product(String name, String description, int price, int stock, String active, String filename, InputStream data) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.stock = stock;
         this.active = active;
+        this.filename = filename;
+        this.data = data;
     }
 
     // Getters and setters
@@ -54,5 +60,21 @@ public class Product {
 
     public void setActive(String active) {
         this.active = active;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
+
+    public InputStream getData() {
+        return data;
+    }
+
+    public void setData(InputStream data) {
+        this.data = data;
     }
 }
