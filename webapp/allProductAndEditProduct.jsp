@@ -35,8 +35,11 @@
                 <td><%= product.getProductPrice() %></td>
                 <td><%= product.getProductStock() %></td>
                 <td><%= product.getProductActive() %></td>
+                <td><a href="editProduct.jsp?productId=<%= product.getProductId() %>">Edit</a></td>
+                <td><a href="deleteProduct.jsp?productId=<%= product.getProductId() %>">Delete</a></td>
             </tr>
         <% } %>
     </table>
 </body>
 </html>
+
