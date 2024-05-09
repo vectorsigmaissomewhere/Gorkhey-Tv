@@ -87,4 +87,13 @@ mysql> desc users;
 +--------------+--------------+------+-----+---------+----------------+
 10 rows in set (0.00 sec)
 
-mysql>
+
+mysql> desc contact;
++--------------------+--------------+------+-----+---------+-------+
+| Field              | Type         | Null | Key | Default | Extra |
++--------------------+--------------+------+-----+---------+-------+
+| username           | varchar(100) | YES  |     | NULL    |       |
+| messagetitle       | varchar(255) | YES  |     | NULL    |       |
+| messagedescription | text         | YES  |     | NULL    |       |
++--------------------+--------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
