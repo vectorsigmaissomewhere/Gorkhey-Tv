@@ -39,4 +39,30 @@ public class ProductDaoData {
         }
         return products;
     }
+    
+    public ProductDataBean getProductById(int productId) {
+        ProductDataBean product = null;
+        try {
+            String query = "SELECT * FROM product WHERE productid=?";
+            PreparedStatement pstmt = con.prepareStatement(query);
+            pstmt.setInt(1, productId);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                product = new ProductDataBean();
+                product.setProductId(rs.getInt("productid"));
+                product.setProductName(rs.getString("name"));
+                product.setProductDescription(rs.getString("description"));
+                product.setProductPrice(rs.getString("price"));
+                product.setProductStock(rs.getInt("stock"));
+                product.setProductActive(rs.getString("active"));
+                // You can set additional properties here as needed
+            }
+            pstmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return product;
+    }
+
+
 }
