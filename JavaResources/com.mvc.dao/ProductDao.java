@@ -3,10 +3,14 @@ package com.mvc.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.mvc.bean.Product;
 import com.mvc.bean.ProductBean;
+import com.mvc.util.DBConnection;
 
 public class ProductDao {
     private Connection con;
@@ -14,6 +18,10 @@ public class ProductDao {
     public ProductDao(Connection con) {
         super();
         this.con = con;
+    }
+    
+    public ProductDao() {
+        
     }
 
     public List<ProductBean> getAllProducts() {
@@ -43,6 +51,37 @@ public class ProductDao {
         }
         return list;
     }
+    
+    public void addProduct(Product product) {
+        Connection con = null;
+        PreparedStatement preparedStatement = null;
 
+        try {
+            con = DBConnection.createConnection();
+            String query = "INSERT INTO product (name, description, price, stock, active) VALUES (?, ?, ?, ?, ?)";
+            preparedStatement = con.prepareStatement(query);
+            preparedStatement.setString(1, product.getName());
+            preparedStatement.setString(2, product.getDescription());
+            preparedStatement.setInt(3, product.getPrice());
+            preparedStatement.setInt(4, product.getStock());
+            preparedStatement.setString(5, product.getActive());
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (preparedStatement != null) {
+                    preparedStatement.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
+
 
