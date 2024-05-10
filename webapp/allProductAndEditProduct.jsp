@@ -15,8 +15,56 @@
 <head>
     <meta charset="UTF-8">
     <title>All Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            color: darkblue;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="header">
+    	<a href="AdminDashboard.jsp">Admin Dashboard</a>
+        <a href="addNewProduct.jsp">Add New Product</a>
+        <a href="allProductAndEditProduct.jsp">All Products and Edit Products</a>
+        <a href="messageReceived.jsp">Message Received</a>
+        <a href="OrderedReceived.jsp">Ordered Received</a>
+        <a href="deliveredOrder.jsp">Delivered Orders</a>
+        <a href="Logout.jsp">Logout</a>
+    </div>
     <h1>All Products</h1>
     <table border="1">
         <tr>
@@ -26,6 +74,8 @@
             <th>Price</th>
             <th>Stock</th>
             <th>Active</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
         <% for (ProductDataBean product : products) { %>
             <tr>
@@ -40,6 +90,9 @@
             </tr>
         <% } %>
     </table>
+</div>
 </body>
 </html>
+
+
 
