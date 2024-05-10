@@ -18,38 +18,24 @@ Day 7 - 5/10/2023
 
 # For User
 
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/login.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/registration.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/home.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/product.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/contact.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/aboutus.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/cart.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/orderstatus.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/userprofile.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/edituserprofile.PNG
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/login.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/registration.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/home.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/product.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/contact.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/aboutus.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/cart.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/orderstatus.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/userprofile.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/edituserprofile.PNG"/>
 
 
 # For admin
 
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/admindashboard.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/addnewproduct.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/allproducts.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/messaageReceived.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/orderedReceived.PNG
-
-https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/deliveredOrder.PNG
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/admindashboard.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/addnewproduct.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/allproducts.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/messaageReceived.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/orderedReceived.PNG"/>
+<img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/deliveredOrder.PNG"/>
 
