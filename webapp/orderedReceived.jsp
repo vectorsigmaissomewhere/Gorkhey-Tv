@@ -1,118 +1,102 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="java.util.List,java.sql.SQLException" %>
-<%@ page import="com.mvc.bean.OrderDetail" %>
-<%@ page import="com.mvc.dao.OrderDao"%>
-
-
-<%
-    // Assuming orders are obtained from the database using OrderDao
-    List<OrderDetail> orders = null;
-    try {
-        // Retrieve orders from the database
-        OrderDao orderDao = new OrderDao();
-        orders = orderDao.getAllOrders();
-    } catch (SQLException e) {
-        // Handle SQLException
-        e.printStackTrace();
-    }
-%>
-
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+ pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Ordered Received</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Login</title>
 <style>
     body {
         font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
     }
-    .container {
+
+    h1 {
         text-align: center;
     }
-    h1 {
-        color: #333;
+
+    form {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    table {
-        margin: 0 auto; /* Center the table */
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
+
+    label {
+        display: block;
+        margin-bottom: 5px;
         text-align: left;
     }
-    th {
-        background-color: #f2f2f2;
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
     }
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    tr:hover {
-        background-color: #ddd;
-    }
-    input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 8px 20px;
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 48%;
+        padding: 10px;
         border: none;
-        border-radius: 4px;
+        border-radius: 5px;
         cursor: pointer;
+        font-size: 16px;
+        background-color: #333;
+        color: #fff;
     }
-    input[type="submit"]:hover {
-        background-color: #45a049;
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+        background-color: #555;
     }
 </style>
+<script> 
+function validate() { 
+    var username = document.form.username.value; 
+    var password = document.form.password.value;
+
+    if (username==null || username=="") { 
+        alert("Username cannot be blank"); 
+        return false; 
+    } else if(password==null || password=="") { 
+        alert("Password cannot be blank"); 
+        return false; 
+    } 
+}
+</script> 
 </head>
 <body>
-<div class="container">
-    <div class="header">
-    	<a href="AdminDashboard.jsp">Admin Dashboard</a>
-        <a href="addNewProduct.jsp">Add New Product</a>
-        <a href="allProductAndEditProduct.jsp">All Products and Edit Products</a>
-        <a href="messageReceived.jsp">Message Received</a>
-        <a href="OrderedReceived.jsp">Ordered Received</a>
-        <a href="deliveredOrder.jsp">Delivered Orders</a>
-        <a href="Logout.jsp">Logout</a>
+    <h1>Login application</h1>
+    <br>
+    <!-- Display message if available -->
+    <div style="text-align:center; color:red;">
+        <% String message = request.getParameter("message");
+           if (message != null && !message.isEmpty()) {
+               out.println(message);
+           }
+        %>
     </div>
-    <h1>Ordered Received</h1>
-    <table border="1">
-        <tr>
-            <th>Order ID</th>
-            <th>Username</th>
-            <th>Product Name</th>
-            <th>Total</th>
-            <th>Payment Method</th>
-            <th>Transaction ID</th>
-            <th>Status</th>
-            <th>Address</th>
-            <th>Order Date</th>
-            <th>Delivery Date</th>
-            <th>Click to deliver order</th>
-        </tr>
-        <% for (OrderDetail order : orders) { %>
-        <tr>
-            <td><%= order.getOrderId() %></td>
-            <td><%= order.getUsername() %></td>
-            <td><%= order.getProductName() %></td>
-            <td><%= order.getTotal() %></td>
-            <td><%= order.getPaymentMethod() %></td>
-            <td><%= order.getTransactionId() %></td>
-            <td><%= order.getStatus() %></td>
-            <td><%= order.getAddress() %></td>
-            <td><%= order.getOrderDate() %></td>
-            <td><%= order.getDeliveryDate() %></td>
-            <td>
-                <form action="MarkOrderDeliveredServlet" method="post">
-                    <input type="hidden" name="orderId" value="<%= order.getOrderId() %>">
-                    <input type="submit" value="Order Delivered">
-                </form>
-            </td>
-        </tr>
-        <% } %>
-    </table>
-</div>
+    <form name="form" action="LoginServlet" method="post" onsubmit="return validate()">
+        <!-- Do not use table to format fields. As a good practice use CSS -->
+        
+        <label for="username">Username</label>
+        <input type="text" name="username">
+
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        
+        <span style="color:red;"><%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%></span>
+        
+        <input type="submit" value="Login">
+        <input type="reset" value="Reset">
+    </form>
 </body>
 </html>
