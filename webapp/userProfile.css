@@ -1,0 +1,48 @@
+/* userProfile.css */
+
+/* Styles for the header */
+/* userProfile.css */
+
+/* Apply the font to the body */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Optionally, you can specify different fonts for different elements */
+h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+/* Styles for the user profile data */
+p {
+    margin-bottom: 10px;
+}
+
+/* Styles for the edit profile link */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styles for the footer links */
+body {
+    text-align: center;
+}
+
+a {
+    margin: 0 10px; /* Add spacing between links */
+}
