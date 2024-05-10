@@ -1,3 +1,4 @@
+<!--NEW ABOUTUS PAGE IS MADE IN OUR PROJECT, BUT YOU CAN USE THIS -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
