@@ -129,8 +129,8 @@
         <div class="footer-content">
             <h3>Contact Information</h3>
             <p>Email: @gmail.com</p>
-            <p>Phone: 9804050870</p>
-            <p>Address: Itahari-1, Sunsari</p>
+            <p>Phone: 989898989898</p>
+            <p>Address: SomeWhere</p>
         </div>
         <div class="footer-content">
             <h3>Follow Us</h3>
