@@ -16,6 +16,15 @@ Day 6 - 5/9/2023
 
 Day 7 - 5/10/2023
 
+There are some problems like user can go the admin panel. A small line of code can fix that but
+there is one problem when I stop the tomcat server and restart it . It tells me to remove the cookies.
+like couldn't connect to localhost.
+
+also we were unable to show the images in product page and in home page we have not written code for featured products
+, fix this too
+
+Fix it if you can
+
 # For User
 
 <img src="https://github.com/vectorsigmaissomewhere/SellTelevision/blob/main/ProjectLooks/imagesofproject/login.PNG"/>
