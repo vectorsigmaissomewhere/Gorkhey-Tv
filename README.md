@@ -16,7 +16,7 @@ Day 6 - 5/9/2023
 
 Day 7 - 5/10/2023
 
-There are some problems like user can go the admin panel. A small line of code can fix that but
+There are some problems like user can go to the admin panel. A small line of code can fix that but
 there is one problem when I stop the tomcat server and restart it . It tells me to remove the cookies.
 like couldn't connect to localhost.
 
