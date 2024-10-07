@@ -22,6 +22,8 @@ like couldn't connect to localhost.
 
 also I am unable to show the images in product page and in home page we have not written code for featured products
 , fix this too
+also there are lots of security bugs since the requirement of the college was about functionality and not about 
+secuity bug
 
 Fix it if you can
 
